@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\ToDOEntity\\ToDOEntity\\ToDOEntity.csproj": {}
+    "/home/loona/Work/tries/Projects/TodoEntity/ToDOEntity.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\ToDOEntity\\ToDOEntity\\ToDOEntity.csproj": {
+    "/home/loona/Work/tries/Projects/TodoEntity/ToDOEntity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\ToDOEntity\\ToDOEntity\\ToDOEntity.csproj",
+        "projectUniqueName": "/home/loona/Work/tries/Projects/TodoEntity/ToDOEntity.csproj",
         "projectName": "ToDOEntity",
-        "projectPath": "E:\\Projects\\ToDOEntity\\ToDOEntity\\ToDOEntity.csproj",
-        "packagesPath": "C:\\Users\\mussa\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\ToDOEntity\\ToDOEntity\\obj\\",
+        "projectPath": "/home/loona/Work/tries/Projects/TodoEntity/ToDOEntity.csproj",
+        "packagesPath": "/home/loona/.nuget/packages/",
+        "outputPath": "/home/loona/Work/tries/Projects/TodoEntity/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mussa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/loona/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -39,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/home/loona/.local/share/mise/dotnet-root/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
