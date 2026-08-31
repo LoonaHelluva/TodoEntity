@@ -5,11 +5,10 @@ namespace ToDOEntity;
 
 public class TodoDbContext : DbContext
 {
-    public DbSet<Task> Task { get; set; }
+    public DbSet<TaskItem> Tasks { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public TodoDbContext(DbContextOptions<TodoDbContext> options) : base(options)
     {
-        optionsBuilder.UseSqlite("Data Source=TodoDb.db")
-                      .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
+
     }
 }

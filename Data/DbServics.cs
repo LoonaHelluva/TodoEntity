@@ -1,32 +1,31 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
 
 namespace ToDOEntity;
 
-public class TodoDbService
+public class DbService
 {
-    public async void CheckDb()
+    private readonly TodoDbContext _db;
+
+    public DbService(TodoDbContext db)
     {
-        using (var db = new TodoDbContext())
-        {
-            await db.Database.EnsureCreatedAsync();
-        }
-        ;
+        _db = db;
+    }
+    public async Task CheckDbAsync()
+    {
+        await _db.Database.EnsureCreatedAsync();
     }
 
-    public async void AddTask(Task task)
+    public async Task AddTaskAsync(TaskItem task)
     {
-        using var db = new TodoDbContext();
-
-        await db.AddAsync(task);
-        await db.SaveChangesAsync();
+        await _db.AddAsync(task);
+        await _db.SaveChangesAsync();
     }
 
-    public async Task<Task?> GetTaskByIdAsync(int id)
+    public async Task<TaskItem?> GetTaskByIdAsync(int id)
     {
-        using var db = new TodoDbContext();
-
-        return await db.Set<Task>().FirstOrDefaultAsync(t => t.Id == id);
+        return await _db.Set<TaskItem>()
+                        .Where(t => t.IsDone == false)
+                        .FirstOrDefaultAsync(t => t.Id == id);
     }
 }
