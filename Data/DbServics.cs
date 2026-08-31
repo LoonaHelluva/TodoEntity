@@ -18,7 +18,7 @@ public class DbService
     {
         var isExists = await _db.Database.EnsureCreatedAsync();
 
-        if (!isExists)
+        if (isExists == false)
         {
             await AddTaskAsync(new List<TaskItem>()
                 {

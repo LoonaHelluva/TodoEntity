@@ -47,20 +47,20 @@ namespace ToDOEntity
 
                 //GETTING Task by id
                 System.Console.WriteLine("==== GETTING TASK BY ID ====");
-                var task = await service.GetTaskByIdAsync(2);
+                var task = await service.GetTaskByIdAsync(1);
                 TaskHelper.PrintTask(task);
                 System.Console.WriteLine("============\n");
 
                 //UPDATING task's title by id
                 System.Console.WriteLine("==== UPDATING TASK ====");
-                await service.UpdateTaskTitleAsync(2, "Go to the park");
+                await service.UpdateTaskTitleAsync(1, "Go to the park");
                 var tasksList = await service.GetTasksAsync();
                 TaskHelper.PrintTasks(tasksList);
                 System.Console.WriteLine("============\n");
 
                 //DELETING task by id
                 System.Console.WriteLine("==== DELETING TASK ====");
-                await service.DeleteTaskById(2);
+                await service.DeleteTaskById(1);
 
                 var tL = await service.GetTasksAsync();
                 TaskHelper.PrintTasks(tL);
